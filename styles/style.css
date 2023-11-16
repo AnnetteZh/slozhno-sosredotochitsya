@@ -3,6 +3,10 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background-color: var(--bg-color);
+  background-image: var(--bg-pic);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 
@@ -17,10 +21,9 @@
 .header {
   padding: 20px;
   height: 100vh;
+  min-height: 768px;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
-  background-image: var(--bg-pic);
-  background-color: var(--bg-color);
   position: relative;
 }
 
@@ -31,8 +34,8 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--angle-color);
+  border-right: 1px solid var(--angle-color);
 }
 
 .header::after {
@@ -42,8 +45,8 @@
   position: absolute;
   left: 20px;
   bottom: 20px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--angle-color);
+  border-left: 1px solid var(--angle-color);
 }
 
 .rec {
@@ -54,7 +57,7 @@
   font-weight: 400;
   line-height: 25px;
   text-transform: uppercase;
-  color: var(--accent-color);
+  color: var(--rec-color);
 }
 
 .rec::after {
@@ -65,8 +68,8 @@
   border-radius: 50%;
   width: 9px;
   height: 9px;
-  filter: drop-shadow(0px 0px 4px var(--accent-color));
-  background: var(--accent-color);
+  filter: drop-shadow(0px 0px 4px var(--rec-color));
+  background: var(--rec-color);
 }
 
 .header__theme-menu-list {
@@ -237,7 +240,7 @@
   background-color: var(--accent-color);
 }
 
-.article-subtitle_f {
+.article-sub-subtitle {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 18px;
   font-style: normal;
@@ -302,6 +305,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  min-height: 768px;
   margin-block-start: 60px;
   padding: 20px;
   position: relative;
@@ -314,8 +318,8 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--angle-color);
+  border-right: 1px solid var(--angle-color);
 }
 
 .footer::after {
@@ -325,8 +329,8 @@
   position: absolute;
   left: 20px;
   bottom: 20px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--angle-color);
+  border-left: 1px solid var(--angle-color);
 }
 
 .footer-title {
@@ -334,17 +338,21 @@
   font-size: 157px;
   font-weight: 700;
   line-height: 82.5%;
-  color: var(--titile-color);
+  color: var(--title-color);
   text-shadow: 2px 2px 0px var(--accent-color);
 }
 
 @media (max-width: 768px) {
+  .header {
+    min-height: 1024px;
+  }
+
   .header__theme-menu-list {
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
     padding-top: 172px;
-    gap: 18px;
+    gap: 10px;
   }
 
   .title {
@@ -360,6 +368,10 @@
     width: 236px;
   }
 
+  .footer {
+    min-height: 1024px;
+  }
+
   .footer-title {
     font-size: 120px;
   }
@@ -368,6 +380,7 @@
 @media (max-width: 576px) {
   .header {
     padding: 10px;
+    min-height: 668px;
   }
 
   .header::before {
@@ -390,7 +403,7 @@
     justify-content: flex-end;
     align-items: flex-end;
     padding-top: 65px;
-    gap: 18px;
+    gap: 10px;
   }
 
   .title {
@@ -441,6 +454,7 @@
   .footer {
     margin-block-start: 40px;
     padding: 10px;
+    min-height: 668px;
   }
 
   .footer::before {

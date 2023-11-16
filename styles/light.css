@@ -8,6 +8,8 @@
   --bg-color: #FFF1F7;
   --bg-pic: url(../images/cover-image-light.png);
   --accent-color: #FF8DCB;
+  --rec-color: #FFF1F7;
+  --angle-color: #353430;
   --title-color: #FFC2E6;
   --subtitle-color: #353430;
   --article-title-color: #353430;
@@ -20,6 +22,8 @@
     --bg-color: #FFF1F7;
     --bg-pic: url(../images/cover-image-light.png);
     --accent-color: #FF8DCB;
+    --rec-color: #FFF1F7;
+    --angle-color: #353430;
     --title-color: #FFC2E6;
     --subtitle-color: #353430;
     --article-title-color: #353430;
